@@ -1,5 +1,5 @@
 # nhentai-one-key-downloader
-A pure shell script that can easily download comics from nhentai.
+A pure shell script that can easily download comics from nhentai.  
 一个可以一键下载nhentai本子的纯shell脚本。中文文档编写中。
 
 ## Prepare
