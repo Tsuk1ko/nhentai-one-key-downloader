@@ -1,6 +1,7 @@
 # nhentai-one-key-downloader
 A pure shell script that can easily download comics from nhentai.  
-一个可以一键下载nhentai本子的纯shell脚本。中文文档编写中。
+一个可以一键下载nhentai本子的纯shell脚本。  
+[中文说明文档](https://ykilin.moe/technology/195.html)
 
 ## Prepare
 First, download this scropt.
@@ -39,4 +40,12 @@ Download from nhentai websites like `https://nhentai.net/g/xxxxxx/`.
 ./nhentai-batch.sh -b
 ```
 Then follow the tips input nhentai websites. Each website end with a Enter. An empty line input means stop continuing input.  
-Then the script will download all comic you input automatically.
+Then the script will download all comic you input automatically.  
+**IMPORTANT: There must be a "/" after the url!**
+
+## Other explanation
+If you interrupt it while downloading, the download will continue when you download the same comic again.  
+If you have interrupted the script while running, you will find directories like `.nhentai-temp-xxxxx`. They are temp files which can be delete.
+
+## TODO
+Development a web page.
