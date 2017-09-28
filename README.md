@@ -24,7 +24,7 @@ Download from an nhentai (search/tags/artists/...) website that include multi co
 ```
 ./nhentai-batch.sh -a
 ```
-Then follow the tips input an nhentai website and press enter. The script will analyze all comics on the website automatically.
+Then follow the tips input an nhentai website and press enter. The script will analyze all comics on the website automatically.  
 After finishing analyzing, the script will remind you that there are 3 modes to download comics:
 
 1. White list mode : Download which you appoint
@@ -38,5 +38,5 @@ Download from nhentai websites like `https://nhentai.net/g/xxxxxx/`.
 ```
 ./nhentai-batch.sh -b
 ```
-Then follow the tips input nhentai websites. Each website end with a Enter. An empty line input means stop continuing input.
+Then follow the tips input nhentai websites. Each website end with a Enter. An empty line input means stop continuing input.  
 Then the script will download all comic you input automatically.
