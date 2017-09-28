@@ -4,7 +4,7 @@ A pure shell script that can easily download comics from nhentai.
 ## Prepare
 First, download this scropt.
 ```
-wget -N --no-check-certificate  https://raw.githubusercontent.com/YKilin/nhentai-one-key-downloader/master/nhentai-batch.sh && chmod +x nhentai-batch.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/YKilin/nhentai-one-key-downloader/master/nhentai-batch.sh && chmod +x nhentai-batch.sh
 ```
 Then edit it with vi or other editor. You can see this part at the beginning of the script.
 ```
@@ -19,7 +19,7 @@ Modify these settings if you want to change.
 ## Start using
 There are 2 modes in this script.
 ### Mode a
-Download from an nhentai (search/tags/artists/...) website that include multi comics. Such as`https://nhentai.net/search/?q=xxxxxx`.
+Download from an nhentai (search/tags/artists/...) website that include multi comics. Such as `https://nhentai.net/search/?q=xxxxxx`.
 ```
 ./nhentai-batch.sh -a
 ```
@@ -33,7 +33,7 @@ After finishing analyzing, the script will remind you that there are 3 modes to 
 If you choose mode 1 or 2, you will be ask to input the ordinals of the comics you want (or do not want) to download. (separated them by space)
 
 ### Mode b
-Download from nhentai websites like`https://nhentai.net/g/xxxxxx/`.
+Download from nhentai websites like `https://nhentai.net/g/xxxxxx/`.
 ```
 ./nhentai-batch.sh -b
 ```
