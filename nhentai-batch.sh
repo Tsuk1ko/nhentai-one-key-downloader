@@ -203,11 +203,12 @@ else
 	fi
 fi
 
-echo "################################"
-echo "# nhentai One click downloader #"
-echo "# Author: Jindai Kirin         #"
-echo "# Blog:   https://ykilin.moe   #"
-echo "################################"
+echo "################################################################"
+echo "# nhentai One key downloader                                   #"
+echo "# Author: Jindai Kirin                                         #"
+echo "# Github: https://github.com/YKilin/nhentai-one-key-downloader #"
+echo "# Blog  : https://ykilin.moe                                   #"
+echo "################################################################"
 
 #check
 if [ -f "$dldir" ]; then
