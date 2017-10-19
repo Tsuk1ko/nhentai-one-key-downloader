@@ -16,7 +16,7 @@ Then edit it with vi or other editor. You can see this part at the beginning of 
 zad=1			#Auto zip the directory after downloading
 dsaz=1			#Delete sourse directory after zipping
 
-dldir="comics"	#The name of the directory you want to download to
+dldir="comics"	#The name of the directory you want to download to (can be ausolute or relative)
 ```
 Modify these settings if you want to change.
 
