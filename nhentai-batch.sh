@@ -211,7 +211,7 @@ echo "################################################################"
 echo "# nhentai One key downloader                                   #"
 echo "# Author: Jindai Kirin                                         #"
 echo "# Github: https://github.com/YKilin/nhentai-one-key-downloader #"
-echo "# Blog  : https://ykilin.moe                                   #"
+echo "# Blog  : https://lolico.moe                                   #"
 echo "################################################################"
 echo
 
