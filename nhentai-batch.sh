@@ -93,6 +93,7 @@ function download_comic { # i name num dweb
 			zipcmd="-rm"
 		fi
 		zip $zipcmd "${2}.zip" "$2" >/dev/null
+		chmod 777 "${2}.zip"
 		echo "Zip $1 Completed!"
 	fi
 	echo
