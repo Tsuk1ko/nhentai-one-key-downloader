@@ -4,7 +4,7 @@
 zad=1			#Auto zip the directory after downloading
 dsaz=1			#Delete sourse directory after zipping
 
-dldir="comics"	#The name of the directory you want to download to
+dldir="comics"	#The name of the directory you want to download to (can be ausolute or relative)
 
 
 
@@ -55,6 +55,7 @@ function download_comic { # i name num dweb
 	if [ ! -d "$2" ]; then
 		mkdir "$2"
 	fi
+	chmod 777 "$2"
 	cd "$2"
 	exn=".jpg"
 	if [ -f .dl ]; then
@@ -115,7 +116,7 @@ function download_comics_from_search {
 	do
 		((alli++))
 		printf "\b\b\b\b\b%2d/%2d" $alli $allcnt
-		curl -s $web | grep ".*<h2>\(.*\)<\/h2>.*" | sed 's/.*<h2>\(.*\)<\/h2>.*/\1/g' | sed '2d' | sed 's/\// /g' | sed 's/\&amp;/\&/g' >> ${ft[1]}
+		curl -s $web | grep ".*<h2>\(.*\)<\/h2>.*" | sed 's/.*<h2>\(.*\)<\/h2>.*/\1/g' | sed '2d' | sed 's/\// /g' | sed 's/\&amp;/\&/g' | sed "s/&#39;/'/g" >> ${ft[1]}
 		temp=`curl -s $web"1/"`
 		echo $temp | grep "https://i.nhentai.net/galleries/\d*" | sed 's/.*src="\(.*\)1\..*\".*/\1/g' >> ${ft[2]}
 		echo $temp | grep "num-pages" | sed '2d' | sed 's/.*>\([0-9]\{1,\}\)<\/span><\/button>.*/\1/g' >> ${ft[3]}
@@ -187,7 +188,7 @@ function download_comics_form_multi_websites {
 	i=1
 	for web in $(cat ${ft[0]})
 	do
-		name=`curl -s $web | grep ".*<h2>\(.*\)<\/h2>.*" | sed 's/.*<h2>\(.*\)<\/h2>.*/\1/g' | sed '2d' | sed 's/\// /g' | sed 's/\&amp;/\&/g'`
+		name=`curl -s $web | grep ".*<h2>\(.*\)<\/h2>.*" | sed 's/.*<h2>\(.*\)<\/h2>.*/\1/g' | sed '2d' | sed 's/\// /g' | sed 's/\&amp;/\&/g' | sed "s/&#39;/'/g"`
 		temp=`curl -s $web"1/"`
 		dweb=`echo $temp | grep "https://i.nhentai.net/galleries/\d*" | sed 's/.*src="\(.*\)1\..*\".*/\1/g'`
 		num=`echo $temp | grep "num-pages" | sed '2d' | sed 's/.*>\([0-9]\{1,\}\)<\/span><\/button>.*/\1/g'`
@@ -221,8 +222,9 @@ if [ -f "$dldir" ]; then
 	exit
 fi
 if [ ! -d "$dldir" ]; then
-	mkdir $dldir
+	mkdir "$dldir"
 fi
+chmod 777 "$dldir"
 cd $dldir
 ndir=`pwd`
 
@@ -233,7 +235,8 @@ ft=("${ftd}/allweb" "${ftd}/name" "${ftd}/dweb" "${ftd}/num")
 if [ ! -d "$ftd" ]; then
 	mkdir "$ftd"
 fi
-
+chmod 777 "$ftd"
+      
 #start
 if [ "$1" = "-a" ]; then
 	download_comics_from_search
