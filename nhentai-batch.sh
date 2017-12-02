@@ -159,8 +159,8 @@ function download_comics_from_search {
 			continue
 		fi
 		#info
-		name=`sed -n ${i}p ${ft[1]}`
-		dweb=`sed -n ${i}p ${ft[2]}`
+		name=`sed -n ${i}p ${ft[1]} | sed 's/[\/\\\:\*\?\"\<\>\|]//g'`
+		dweb=`sed -n ${i}p ${ft[2]} | sed 's/\(https:\/\/i.nhentai.net\/galleries\/[0-9][0-9]*\/\).*/\1/g'`
 		num=`sed -n ${i}p ${ft[3]}`
 		
 		if [ -f "${name}.zip" ]; then
