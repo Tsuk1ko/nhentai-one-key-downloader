@@ -6,7 +6,7 @@ A pure shell script that can easily download comics from nhentai.
 [中文说明文档](https://lolico.moe/technology/nhentai-downloader.html)
 
 ## Prepare
-First, download this scropt.
+First, download this script.
 ```bash
 wget -N --no-check-certificate https://raw.githubusercontent.com/YKilin/nhentai-one-key-downloader/master/nhentai-batch.sh && chmod +x nhentai-batch.sh
 ```
