@@ -18,7 +18,7 @@ dsaz=1			#Delete sourse directory after zipping
 
 dldir="comics"	#The name of the directory you want to download to (can be ausolute or relative)
 ```
-Modify these settings if you want to change.
+Modify it according to your needs.
 
 ## Start using
 There are 2 modes in this script.
