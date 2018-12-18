@@ -1,4 +1,8 @@
 # nhentai-one-key-downloader
+Please use https://github.com/Tsuk1ko/nhder instead.
+
+请使用 https://github.com/Tsuk1ko/nhder ，本脚本将封存，不再维护
+
 A pure shell script that can easily download comics from nhentai.
 
 一个可以一键下载nhentai本子的纯shell脚本。
